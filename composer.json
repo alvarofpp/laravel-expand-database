@@ -1,0 +1,27 @@
+{
+    "name": "alvarofpp/expand-database",
+    "description": "A package to make your database more powerful",
+    "keywords" : ["laravel", "database", "migrations"],
+    "type": "library",
+    "homepage": "https://github.com/alvarofpp/laravel-expand-database",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Álvaro Ferreira Pires de Paiva",
+            "email": "alvarofepipa@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.0"
+    },
+    "require-dev": {
+        "laravel/laravel": ">=6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Alvarofpp\\ExpandDatabase\\": "/src"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
