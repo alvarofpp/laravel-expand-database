@@ -1,6 +1,6 @@
 # expand-database
-[![Latest Stable Version](https://img.shields.io/packagist/v/alvarofpp/expand-database.svg)](//packagist.org/packages/alvarofpp/expand-database)
-[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](//packagist.org/packages/alvarofpp/expand-database)
+[![Packagist Version](https://img.shields.io/packagist/v/alvarofpp/expand-database)](https://packagist.org/packages/alvarofpp/expand-database)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/alvarofpp/laravel-expand-database/blob/master/LICENSE)
 
 A package to make your database more powerful.
 
@@ -55,4 +55,4 @@ Schema::table('users', function (Blueprint $table) {
 ```
 
 ## Contributing
-Contributions are more than welcome. Fork, improve and make a pull request. For bugs, ideas for improvement or other, please create an [issue](https://github.com/alvarofpp/laravel-expand-databases/issues).
+Contributions are more than welcome. Fork, improve and make a pull request. For bugs, ideas for improvement or other, please create an [issue](https://github.com/alvarofpp/laravel-expand-database/issues).
