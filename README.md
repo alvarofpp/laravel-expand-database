@@ -35,6 +35,7 @@ This package currently contains:
 Add a comment to a table (MySQL/PostgreSQL).
 Use the method `comment` in your Blueprint object, like:
 ```php
+<?php
 Schema::create('users', function (Blueprint $table) {
     $table->id();
     $table->string('name');
@@ -50,6 +51,7 @@ Schema::create('users', function (Blueprint $table) {
 
 To remove the table comment, just set a empty string in the method:
 ```php
+<?php
 Schema::table('users', function (Blueprint $table) {
     $table->comment('');
 });
