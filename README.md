@@ -15,7 +15,8 @@ Install via composer:
 composer require alvarofpp/expand-database
 ```
 
-Open the `config/app.php` file and add the following line to register the service provider:
+Laravel uses Package Auto-Discovery, so doesn't require you to manually add the ServiceProvider.
+But if you don't use auto-discovery, open the `config/app.php` file and add the following line to register the service provider:
 ```php
 'providers' => [
     // ...
