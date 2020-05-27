@@ -23,4 +23,18 @@ class PostgresGrammar extends BasePostgresGrammar
             "'" . str_replace("'", "''", $command->comment) . "'"
         );
     }
+
+    /**
+     * Compile a removing table comment command.
+     *
+     * @param \Illuminate\Database\Schema\Blueprint $blueprint
+     * @param \Illuminate\Support\Fluent $command
+     * @return string
+     */
+    public function compileRemoveComment(Blueprint $blueprint, Fluent $command): string
+    {
+        return sprintf('COMMENT ON TABLE %s IS NULL',
+            $this->wrapTable($blueprint)
+        );
+    }
 }

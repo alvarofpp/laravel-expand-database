@@ -49,11 +49,11 @@ Schema::create('users', function (Blueprint $table) {
 });
 ```
 
-To remove the table comment, just set a empty string in the method:
+To remove the table comment, use `removeComment()` method:
 ```php
 <?php
 Schema::table('users', function (Blueprint $table) {
-    $table->comment('');
+    $table->removeComment();
 });
 ```
 

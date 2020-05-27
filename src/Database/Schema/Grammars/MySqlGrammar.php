@@ -23,4 +23,17 @@ class MySqlGrammar extends BaseMySqlGrammar
             addslashes($command->comment)
         );
     }
+    /**
+     * Compile a removing table comment command.
+     *
+     * @param \Illuminate\Database\Schema\Blueprint $blueprint
+     * @param \Illuminate\Support\Fluent $command
+     * @return string
+     */
+    public function compileRemoveComment(Blueprint $blueprint, Fluent $command): string
+    {
+        return sprintf("alter table %s comment = ''",
+            $this->wrapTable($blueprint)
+        );
+    }
 }
