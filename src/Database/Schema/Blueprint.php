@@ -13,7 +13,7 @@ class Blueprint extends BaseBlueprint
      * @param string $comment
      * @return $this
      */
-    public function comment(string $comment = null): self
+    public function comment(string $comment = ''): self
     {
         $this->addCommand('comment', compact('comment'));
         return $this;
