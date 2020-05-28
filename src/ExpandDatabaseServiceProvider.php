@@ -6,6 +6,7 @@ use Alvarofpp\ExpandDatabase\Database\Connections\MySqlConnection;
 use Alvarofpp\ExpandDatabase\Database\Connections\PostgresConnection;
 use Illuminate\Database\Connection;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Str;
 
 class ExpandDatabaseServiceProvider extends ServiceProvider
 {
@@ -32,6 +33,8 @@ class ExpandDatabaseServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        \Illuminate\Database\Eloquent\Builder::macro("toSqlWithBindings", function () {
+            return Str::replaceArray('?', $this->getBindings(), $this->toSql());
+        });
     }
 }

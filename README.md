@@ -30,6 +30,7 @@ But if you don't use auto-discovery, open the `config/app.php` file and add the 
 ## Usage
 This package currently contains:
 - Table comment (MySQL/PostgreSQL).
+- To Sql with bindings.
 
 ### Table comment
 Add a comment to a table (MySQL/PostgreSQL).
@@ -55,6 +56,21 @@ To remove the table comment, use `removeComment()` method:
 Schema::table('users', function (Blueprint $table) {
     $table->removeComment();
 });
+```
+
+### To Sql with bindings
+You can use the `toSqlWithBindings()` method to print your SQL with bindings (obviously). See this example:
+
+```php
+<?php
+$query = Course::where('price', '>', $request->price)
+    ->where('rating', '>=', $request->min_rating)
+    ->where('rating', '<=', $request->max_rating);
+
+dd($query->toSql(), $query->toSqlWithBindings());
+
+// toSql(): "select * from "courses" where "price" > ? and "rating" >= ? and "rating" <= ?"
+// toSqlWithBindings(): "select * from "courses" where "price" > 100.0 and "rating" >= 4.3 and "rating" <= 5.0"
 ```
 
 ## Contributing
